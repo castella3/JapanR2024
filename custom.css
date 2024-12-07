@@ -1,0 +1,182 @@
+/* Base styles - 既存の custom.css の内容 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+/* Base styles */
+.remark-slide-content {
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 1em 4em;
+  font-size: 1.2em;
+}
+/* Card style */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/* Profile image in card */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* Code blocks */
+.remark-code {
+  border-radius: 6px;
+  font-size: 0.9em;
+  background-color: #282c34;
+}
+/* Title slide */
+.title-slide {
+  background: linear-gradient(135deg, #1a1a1a 0%, #363636 100%);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Title slide remove footer */
+.title-slide .remark-slide-number {
+  display: none;
+}
+/* Two-column layout */
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+/* Inverse slides */
+.inverse {
+  background-color: #1a1a1a;
+  color: white;
+}
+/* Phone card - adjusted size */
+.phone-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  height: 450px;
+  overflow: hidden;
+}
+.phone-card img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+/* Headers */
+h1, h2, h3 {
+  color: #333;
+  font-weight: 700;
+}
+.inverse h1, .inverse h2, .inverse h3 {
+  color: white;
+}
+/* Social media handle */
+.card h3 {
+  margin-top: 0;
+  color: #2b90d9;
+}
+/* List styling */
+.card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.card li {
+  margin: 10px 0;
+  padding-left: 1.5em;
+  position: relative;
+}
+.card li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2b90d9;
+}
+/* Spacing utilities */
+.mb-0 { margin-bottom: 0; }
+.mt-0 { margin-top: 0; }
+
+/* Animation classes */
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  animation-name: slideInRight;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+/* Animation delays */
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
